@@ -1,0 +1,1006 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Architects+Daughter&family=Bebas+Neue&family=Cookie&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qahiri&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Zen+Kurenaido&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --firstFont: 'Zen Kurenaido', sans-serif;
+    --secondFont: 'Source Sans Pro', sans-serif;
+    --thirdFont: 'Rubik', sans-serif;
+    --fourthFont: 'Raleway', sans-serif;
+    --fifthFont: 'Qahiri', sans-serif;
+    --sixthFont: 'Poppins', sans-serif;
+    --seventhFont: 'Patrick Hand', cursive;
+    --eighthFont: 'Josefin Sans', sans-serif;
+    --ninethFont: 'Cookie', cursive;
+    --tenthFont: 'Bebas Neue', cursive;
+    --eleventhFont: 'Architects Daughter', cursive;
+    --twelvethFont: 'Acme', sans-serif;
+
+    --accentColor1: #0077ff;
+    --accentColor2: #0044ff;
+    --accentColor3: crimson;
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+::selection {
+    background-color: black;
+    color: goldenrod;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--eighthFont);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accentColor2);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    height: 50vh;
+    width: 100vw;
+    background-color: var(--accentColor1);
+}
+
+.ham-menu {
+    display: none;
+}
+
+nav {
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--accentColor1);
+    position: relative;
+}
+
+.logo {
+    font-family: var(--fifthFont);
+    font-size: 10rem;
+    color: white;
+    letter-spacing: 0;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+    color: var(--accentColor3);
+}
+
+.container h3 {
+    width: 300px;
+    font-size: 4rem;   
+    font-family: var(--ninethFont);
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.home-header {
+    position: absolute;
+    right: 8%;
+    top: 75%;
+    transition: all 0.3s ease-in-out;
+} 
+.expertise-header {
+    position: absolute;
+    right: 8%;
+    top: 75%;
+    transition: all 0.3s ease-in-out;
+} 
+.works-header {
+    position: absolute;
+    right: 8%;
+    top: 75%;
+    transition: all 0.3s ease-in-out;
+} 
+.contact-header {
+    position: absolute;
+    right: 8%;
+    top: 75%;
+    transition: all 0.3s ease-in-out;
+} 
+
+/* ############### Hero Section Styling ##################### */
+
+.hero {
+    height: 80vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: -10%;
+    left: 3%;
+    z-index: 90;
+    height: 150px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu:hover .menu__box {
+    background-color: var(--accentColor2);
+    transform: perspective(700px) rotateX(30deg) rotateY(30deg) rotateZ(-25deg) translateX(-35px) translateY(0px) translateZ(80px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.menu__box {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 60px;
+    background-color: var(--accentColor1);
+    border-radius: 50px;
+    transition: all 0.7s ease-in-out;
+}
+
+.menu__box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 25%;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu__box a:hover {
+    background-color: var(--accentColor3);
+    transform: perspective(700px) rotateX(40deg) rotateY(30deg) rotateZ(-25deg) translateX(0px) translateY(0px) translateZ(30px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.menu__home {
+    border-radius: 50px 0 0 50px;
+}
+.menu__contact {
+    border-radius: 0 50px 50px 0;
+}
+
+.menu__box img {
+    height: 30px;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.wave {
+    position: absolute;
+    top: 0%;
+}
+
+.hero-text {
+    height: 400px;
+    width: 1000px;
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hero-text .des {
+    display: flex;
+    width: 410px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: move 2s forwards ease-in-out;
+}
+
+@keyframes move {
+    0% {
+        top: 52.5%;
+    }
+    100% {
+        top: 71%;
+    }
+}
+
+
+.hero-text h1 {
+    font-size: 6rem;
+    font-family: var(--thirdFont);
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 900px;
+    padding: 2rem;
+    background-color: var(--accentColor1);
+    color: rgb(250, 250, 250);
+    text-align: center;
+    letter-spacing: 3px;
+    z-index: 10;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+.hero-text p {
+    font-size: 1.7rem;
+    font-family: var(--thirdFont);
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 200px;
+    margin-top: 0;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: black;
+    color: goldenrod;
+    display: block;
+}
+
+/* #################### Expertise Section Styling ############ */
+
+.expertise {
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+}
+
+.expertise .heading-sec {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background-color: #0077ff52;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expertise .heading-sec h1 {
+    font-size: 2rem;
+    font-family: var(--fourthFont);
+    font-weight: 800;
+    transform: rotate(90deg);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    letter-spacing: 25px;
+}
+
+.expertise .skills-sec {
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    left: 0%;
+    top: 0%;
+}
+
+.expertise .skills-sec .skills {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.expertise .skills-sec .web {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expertise .skills-sec .web:hover ul {
+    transform: perspective(900px) rotateX(30deg) rotateY(30deg) rotateZ(-20deg) translateX(-35px) translateY(0px) translateZ(80px) scale(0.7);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.expertise .skills-sec .graphic:hover ul {
+    transform: perspective(900px) rotateX(10deg) rotateY(-30deg) rotateZ(5deg) translateX(-35px) translateY(0px) translateZ(80px) scale(0.7);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.expertise .skills-sec .graphic {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Web Part Styling */
+
+.expertise .skills-sec .web ul {
+    width: 800px;
+    height: 450px;
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: scale(0.7);
+    transition: all 0.5s ease-in-out;
+}
+
+.expertise .skills-sec .web ul li {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.expertise .skills-sec .web ul li h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    font-size: 2rem;
+    font-family: var(--fourthFont);
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.expertise .skills-sec .web ul li .progress-bar {
+    display: block;
+    height: 60px;
+    width: 600px;
+    background-color: var(--accentColor1);
+    position: relative;
+}
+
+.expertise .skills-sec .web ul li .progress-bar .progress {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    background-color: black;
+}
+
+.p1 {
+    width: 0%;
+    transition: all 1s ease-in-out;
+}
+.p2 {
+    width: 0%;
+    transition: all 1s ease-in-out;
+}
+.p3 {
+    width: 0%;
+    transition: all 1s ease-in-out;
+}
+.p4 {
+    width: 0%;
+    transition: all 1s ease-in-out;
+}
+
+.expertise .skills-sec .web:hover .p1 {
+    width: 85%;
+}
+.expertise .skills-sec .web:hover .p2 {
+    width: 70%;
+}
+.expertise .skills-sec .web:hover .p3 {
+    width: 50%;
+}
+.expertise .skills-sec .web:hover .p4 {
+    width: 40%;
+}
+
+/* Graphic Part Styling */
+
+.expertise .skills-sec .graphic ul {
+    width: 800px;
+    height: 450px;
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: scale(0.7);
+    transition: all 0.5s ease-in-out;
+}
+
+.expertise .skills-sec .graphic ul li {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.expertise .skills-sec .graphic ul li h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    font-size: 2rem;
+    font-family: var(--fourthFont);
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.expertise .skills-sec .graphic ul li .progress-bar {
+    display: block;
+    height: 60px;
+    width: 600px;
+    background-color: var(--accentColor1);
+    position: relative;
+}
+
+.expertise .skills-sec .graphic ul li .progress-bar .progress {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    background-color: black;
+}
+
+.p1 {
+    width: 0%;
+    transition: all 1s ease-in-out;
+}
+.p2 {
+    width: 0%;
+    transition: all 1s ease-in-out;
+}
+.p3 {
+    width: 0%;
+    transition: all 1s ease-in-out;
+}
+.p4 {
+    width: 0%;
+    transition: all 1s ease-in-out;
+}
+
+.expertise .skills-sec .graphic:hover .p1 {
+    width: 50%;
+}
+.expertise .skills-sec .graphic:hover .p2 {
+    width: 80%;
+}
+.expertise .skills-sec .graphic:hover .p3 {
+    width: 65%;
+}
+.expertise .skills-sec .graphic:hover .p4 {
+    width: 90%;
+}
+
+
+/*##################### Works Section Styling ################*/
+
+.works {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.works .heading-sec {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #daa52052;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+
+.works .heading-sec h1 {
+    font-size: 2rem;
+    font-family: var(--fourthFont);
+    font-weight: 800;
+    transform: rotate(-90deg);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    letter-spacing: 25px;
+}
+
+.gallery {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    height: 100%;
+    width: 180%;
+    transition: all 1s ease-in-out;
+}
+
+.gallery__parts {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.gallery__parts .websites {
+    width: 50%;
+    position: relative;
+}
+.gallery__parts .g-designs {
+    width: 50%;
+}
+
+.works .webBtn,
+.works .gdBtn {
+    height: 60px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.works .webBtn {
+    bottom: 5%;
+    left: 14%;
+    transform: rotateY(180deg);
+}
+.works .gdBtn {
+    bottom: 5%;
+    right: 3%;
+}
+
+.gallery__parts .websites .sub-gallery {
+    height: 600px;
+    width: 1000px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+.websites .sub-gallery .navBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    align-items: center;
+    height: 350px;
+    width: 50px;
+    position: absolute;
+    top: 25%;
+    left: 9%;
+    z-index: 5;
+    transition: all 0.5s ease-in-out;
+}
+
+.websites .sub-gallery .navBtn li {
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 1rem;
+    background-color: goldenrod;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.gallery__parts .websites .sub-gallery:hover .navBtn {
+    transform: perspective(700px) rotateX(15deg) rotateY(40deg) rotateZ(-19deg) translateX(-290px) translateY(-10px) translateZ(300px);
+}
+
+.gallery__parts .websites .sub-gallery:hover .navBtn>li {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.gallery__parts .websites .sub-gallery .navBtn li:hover {
+    background-color: black;
+    color: goldenrod;
+}
+
+.gallery__parts .websites .sub-gallery .tab__box {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.gallery__parts .websites .sub-gallery .tab__box h1 {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    background-color: goldenrod;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.gallery__parts .websites .sub-gallery:hover .tab__box {
+    transform: perspective(700px) rotateX(30deg) rotateY(20deg) rotateZ(-25deg) translateX(150px) translateY(-120px) translateZ(80px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.gallery__parts .websites .sub-gallery .tab__box .tabs {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0%;
+}
+
+.websites .sub-gallery .tab__box .tab1 {
+    background-image: url(images/harmony.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    top: 100%;
+    transition: all 0.5s ease-in-out;
+}
+.websites .sub-gallery .tab__box .tab2 {
+    background-image: url(images/bmw.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    top: 200%;
+    transition: all 0.5s ease-in-out;
+}
+.websites .sub-gallery .tab__box .tab3 {
+    background-image: url(images/ubisoft.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    top: 300%;
+    transition: all 0.5s ease-in-out;
+}
+.websites .sub-gallery .tab__box .tab4 {
+    background-image: url(images/nike.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    top: 400%;
+    transition: all 0.5s ease-in-out;
+}
+
+.websites .sub-gallery .tab__box .tab1 a,
+.websites .sub-gallery .tab__box .tab2 a,
+.websites .sub-gallery .tab__box .tab3 a,
+.websites .sub-gallery .tab__box .tab4 a {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    font-family: var(--sixthFont);
+    letter-spacing: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.websites .sub-gallery .tab__box .tab1 a:hover,
+.websites .sub-gallery .tab__box .tab2 a:hover,
+.websites .sub-gallery .tab__box .tab3 a:hover,
+.websites .sub-gallery .tab__box .tab4 a:hover {
+    color: goldenrod;
+}
+
+
+.g-designs {
+    position: relative;
+}
+
+.gd__sub-gallery {
+    height: 900px;
+    width: 1400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.gd__sub-gallery h1 {
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.inner1 {
+    height: 500px;
+    width: 395px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 1;
+}
+
+.inner2 {
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: 3;
+}
+
+.inner3 {
+    height: 300px;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+.inner2:hover img {
+    transform: perspective(900px) rotateX(10deg) rotateY(-30deg) rotateZ(5deg) translateX(100px) translateY(-30px) translateZ(80px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.g-design__inner {
+    transform: scale(0.8);
+    transform-origin: left top;
+}
+
+.g-design__inner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.5s ease-in-out;
+}
+.inner1 img {
+    transform: perspective(700px) rotateX(30deg) rotateY(20deg) rotateZ(-25deg) translateX(0px) translateY(0px) translateZ(80px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.inner2 img {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.inner3 img {
+    transform: perspective(900px) rotateX(10deg) rotateY(-30deg) rotateZ(5deg) translateX(-35px) translateY(0px) translateZ(80px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/* #################### Contact Section Styling ###################### */
+
+.contact {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.contact .heading-sec {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    width: 10%;
+    background-color: #dc143c52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .heading-sec h1 {
+    font-size: 2rem;
+    font-family: var(--fourthFont);
+    font-weight: 800;
+    transform: rotate(90deg);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    letter-spacing: 25px;
+}
+
+.contact .contact__inner {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    height: 700px;
+    width: 1200px;
+}
+
+.contact .contact__inner:hover .contact__box {
+    transform: perspective(700px) rotateX(20deg) rotateY(00deg) rotateZ(-15deg) translateX(50px) translateY(-70px) translateZ(80px) scale(0.8);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.contact .contact__inner .contact__box {
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.contact .contact__inner .contact__box form {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 60%;
+    height: 100%;
+}
+
+.contact .contact__inner .contact__box form .form__heading {
+    text-align: center;
+    padding: 2rem;
+    font-weight: 800;
+    font-family: var(--sixthFont);
+    letter-spacing: 3px;
+    color: white;
+    border-bottom: 10px solid rgb(255, 255, 255);
+}
+
+.contact .contact__inner .contact__box .contact__image {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+form ul {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+form ul li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+form ul li input {
+    width: 80%;
+    height: 80px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--sixthFont);
+    border: none;
+    outline: none;
+    color: black;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+}
+form ul li h1 {
+    color: white;
+    font-family: var(--sixthFont);
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+form ul li textarea {
+    width: 80%;
+    height: 70px;
+    text-align: left;
+    font-size: 2rem;
+    font-family: var(--sixthFont);
+    border: none;
+    outline: none;
+    color: white;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    resize: none;
+}
+
+::placeholder {
+    color: white;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+form .submit, .reset {
+    padding: 1rem 2rem;
+    border: none;
+    font-family: var(--sixthFont);
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    cursor: pointer;
+}
+
+form .submit {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transition: all 0.5s ease-in-out;
+}
+form .submit:hover {
+    background-color: black;
+    color: crimson;
+}
+
+form .reset {
+    position: absolute;
+    top: 80%;
+    right: 30%;
+    transition: all 0.5s ease-in-out;
+}
+form .reset:hover {
+    background-color: black;
+    color: crimson;
+}
+
+.social-media {
+    height: 50px;
+    width: 1200px;
+    background-color: crimson;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.contact .contact__inner:hover .contact__box>.social-media {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.social-media ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-media ul li a {
+    font-size: 1.6rem;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.social-media ul li a:hover {
+    color: black;
+    letter-spacing: 5px;
+}

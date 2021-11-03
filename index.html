@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Udit - Portfolio</title>
+</head>
+<body>
+    <div id="container" class="container">
+        <nav>
+            <a href="#"><h1 class="logo">UR</h1></a>
+
+            <div class="ham-menu">
+                <div class="ham-menu__box">
+                    <img class="mobile-avatar" src="images/avatar.svg" alt="">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Expertise</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Hire</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="menu">
+            <div class="menu__box">
+                <a class="menu__home" href="#container">
+                    <img src="images/home.svg" alt="" class="home-icon">
+                </a>
+                <a class="menu__expertise" href="#expertise">
+                    <img src="images/expertise.svg" alt="" class="expertise-icon">
+                </a>
+                <a class="menu__works" href="#works">
+                    <img src="images/works.svg" alt="" class="works-icon">
+                </a>
+                <a class="menu__about" href="#">
+                    <img src="images/about.svg" alt="" class="about-icon">
+                </a>
+                <a class="menu__contact" href="#contact">
+                    <img src="images/contact.svg" alt="" class="contact-icon">
+                </a>
+            </div>
+        </div>
+
+        <!-- <img src="images/wave.svg" alt="" class="wave"> -->
+
+        <div class="hero-text">
+            <h1>UDIT ROSHAN OJHA</h1>
+            <div class="des">
+                <p class="para-one">Web Developer</p>
+                <p class="para-two">Graphic Designer</p>
+            </div>
+        </div>
+
+        <div id="expertise" class="expertise">
+            <div class="heading-sec">
+                <h1>EXPERTISE</h1>
+            </div>
+            <div class="skills-sec">
+                <div class="skills">
+                    <div class="web">
+                        <ul>
+                            <li>
+                                <h1>HTML</h1>
+                                <span class="progress-bar pb1">
+                                    <span class="progress p1"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <h1>CSS</h1>
+                                <span class="progress-bar pb2">
+                                    <span class="progress p2"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <h1>JAVASCRIPT</h1>
+                                <span class="progress-bar pb3">
+                                    <span class="progress p3"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <h1>PHP</h1>
+                                <span class="progress-bar pb4">
+                                    <span class="progress p4"></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="graphic">
+                        <ul>
+                            <li>
+                                <h1>PHOTOSHOP</h1>
+                                <span class="progress-bar pb1">
+                                    <span class="progress p1"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <h1>ILLUSTRATOR</h1>
+                                <span class="progress-bar pb2">
+                                    <span class="progress p2"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <h1>INDESIGN</h1>
+                                <span class="progress-bar pb3">
+                                    <span class="progress p3"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <h1>FIGMA</h1>
+                                <span class="progress-bar pb4">
+                                    <span class="progress p4"></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div  id="works" class="works">
+        <img src="images/graphic-design.png" alt="" class="webBtn">
+        <img src="images/graphic-design.png" alt="" class="gdBtn">
+        <div class="heading-sec">
+            <h1>WORKS</h1>
+        </div>
+        <div class="gallery">
+            <div class="gallery__parts">
+                <div class="websites">
+                    <div class="sub-gallery">
+                        <ul class="navBtn">
+                            <li class="navBtn1">i</li>
+                            <li class="navBtn2">ii</li>
+                            <li class="navBtn3">iii</li>
+                            <li class="navBtn4">iv</li>
+                        </ul>
+                        <div class="tab__box">
+                            <h1>WEBSITES</h1>
+                            <div class="tabs tab1">
+                                <a href="#">HARMONY</a>
+                            </div>
+                            <div class="tabs tab2">
+                                <a href="#">BMW</a>
+                            </div>
+                            <div class="tabs tab3">
+                                <a href="#">UBISOFT</a>
+                            </div>
+                            <div class="tabs tab4">
+                                <a href="#">NIKE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-designs">
+                    <div class="gd__sub-gallery">
+                        <h1>GRAPHIC DESIGNS</h1>
+                        <div class="g-design__inner inner1">
+                            <img src="images/tommy.svg" alt="">
+                        </div>
+                        <div class="g-design__inner inner2">
+                            <img src="images/girl.jpg" alt="">
+                        </div>
+                        <div class="g-design__inner inner3">
+                            <img src="images/fox.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+        <div class="heading-sec">
+            <h1>CONTACT</h1>
+        </div>
+        <div class="contact__inner">
+            <div class="contact__box">
+                <form id="contact-form" method="post" action="form-handler.php" autocomplete="off">
+                    <h1 class="form__heading">CONTACT ME</h1>
+                    <ul>
+                        <li class="first-name">
+                            <input type="text" name="firstName" class="form-control" id="firstName" autocomplete="off"
+                            placeholder="Enter Your First Name" required>
+                        </li>
+                        <li class="last-name">
+                            <input type="text" name="lastName" class="form-control" id="lastName" autocomplete="off"
+                            placeholder="Enter Your Last Name">
+                        </li>
+                        <li class="email">
+                            <input type="email" name="email" class="form-control" id="email" autocomplete="off"
+                            placeholder="Enter Your Email" required>
+                        </li>
+                        <li>
+                            <h1>Message</h1>
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="10"></textarea>
+                        </li>
+                    </ul>
+                    <input class="submit" type="submit" value="SUBMIT">
+                    <input class="reset" type="reset" value="RESET">
+                </form>
+                <img src="images/tommy.svg" alt="" class="contact__image">
+                <div class="social-media">
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
