@@ -45,3 +45,15 @@ navBtnFour.addEventListener('click', ()=>{
     tabThree.style.top = '300%';
     tabFour.style.top = '0%';
 });
+
+
+const mobileMenuIcon = document.querySelector('.ham-menu>img'); 
+const mobileMenuBox = document.querySelector('.ham-menu__box'); 
+
+mobileMenuIcon.addEventListener('click', ()=>{
+    if (mobileMenuBox.style.right == '0%') {
+        mobileMenuBox.style.right = '-100%';
+    } else {
+        mobileMenuBox.style.right = '0%';
+    }
+});
