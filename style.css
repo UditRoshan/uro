@@ -5,7 +5,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 :root {
@@ -27,9 +26,9 @@
     --accentColor3: crimson;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
-} */
+}
 
 ::selection {
     background-color: black;
@@ -94,7 +93,7 @@ nav {
 .hero {
     height: 80vh;
     width: 100vw;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     position: relative;
 }
 
@@ -165,6 +164,7 @@ nav {
     top: -35%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 80;
 }
 
 .hero-text .des {
@@ -590,6 +590,10 @@ nav {
     color: goldenrod;
 }
 
+.mtab__box {
+    display: none;
+}
+
 .gallery__parts .websites .sub-gallery .tab__box {
     height: 100%;
     width: 100%;
@@ -967,6 +971,34 @@ form .reset:hover {
 .social-media ul li a:hover {
     color: black;
     letter-spacing: 5px;
+}
+
+footer {
+    height: 20vh;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+}
+
+footer h1 {
+    color: white;
+    font-family: var(--fifthFont);
+    font-size: 10rem;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+footer p {
+    color: white;
+    font-family: var(--sixthFont);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 }
